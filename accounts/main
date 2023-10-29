@@ -1,0 +1,28 @@
+# vim: filetype=muttrc
+unmailboxes *
+
+# in/out mail servers
+set realname = "Shawn Zimmermann"
+set imap_pass = "jijk tngh bhqf zijr"
+set smtp_url = "smtps://zimmermannshawn@gmail.com@smtp.gmail.com"
+set smtp_pass = "jijk tngh bhqf zijr"
+set folder = "imaps://zimmermannshawn@gmail.com@smtp.gmail.com"
+set spoolfile = "+INBOX"
+
+set from = "zimmermannshawn@gmail.com"
+set envelope_from
+set use_from = "yes"
+#set record = "+[Gmail]/Sent"
+set trash = "+[Gmail]/Trash"
+set postponed = "+[Gmail]/Drafts"
+set mail_check = 6
+
+# Allow Mutt to open a new IMAP connection automatically.
+unset imap_passive
+
+# Keep the IMAP connection alive by polling intermittently (time in seconds).
+set imap_keepalive = 300
+
+## Hook -- IMPORTANT!
+account-hook $folder "set imap_pass=\"jijk tngh bhqf zijr\""
+
